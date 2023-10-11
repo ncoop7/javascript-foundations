@@ -5,17 +5,115 @@
     <title>JS Practice</title>
 </head>
 <body>
+    <button>Press me</button>
+    <div id="greeting"></div>
+
     <script>
-        console.log("Hello, World!")
+        console.log('Hello World!')
 
-        let admin, name;
-        name= 'John'
-        admin= name
+        console.log(23 + 97)
 
-        let ourPlanetName = "Earth";
+        console.log(12 + 12 + 15 + 17 + 90 + 65)
 
-        let currentUser = "Nathan";
+        console.log((4 + 6 + 9)/77)
+
+        let a = 10
+
+        console.log(a)
+        console.log(9 * a)
+
+        let b = 7 * a
+
+        console.log(b)
+
+        const max = 57
+        let actual = max - 13
+        let percentage = actual/max
+
+        console.log(percentage)
+
+        const string = "The revolution will not be televised."
+
+        console.log(string)
         
+        // must use same char for start and end of string
+        // single and double are the same
+        // pick one and stick with it 
+        // backticks allow embedding of javascript inside 
+        // used by ${}
+        const single = 'Single quotes'
+        const double = "Double quotes"
+        const backtick = `Backtick`
+        
+
+        console.log(single)
+        console.log(double)
+        console.log(backtick)
+
+        // can join multiple var with backtick
+        // joining strings => concatenation
+        const one = 'Hello, '
+        const two = 'how are you?'
+        const joined = `${one}${two}`
+
+        console.log(joined)
+
+        // concatenation in context
+        const button = document.querySelector('button');
+
+        function greet() {
+            const name = prompt('What is your name?');
+            const greeting = document.querySelector('#greeting');
+            greeting.textContent = `Hello ${name}, nice to see you!`;
+        }
+
+        button.addEventListener('click', greet);
+        
+        // expressions can be included in template literals
+        const song = 'Fight the Youth';
+        const score = 9;
+        const highestScore = 10;
+        const output = `I like the song ${song}. I gave it a score of ${(score/highestScore) * 100}%`;
+
+        console.log(output)
+
+        // template literals respect line breaks
+        const newline = `One day you finally knew
+        what you had to do, and began`
+
+        console.log(newline)
+
+        // to get the same result using a normal string use \n
+        // use other character to display quotes 
+        const quote = '"I love the taste of chocolate" -Someone'
+
+        //can also put backslash before char
+        const bigmouth = 'I\'ve got no right to take my place..'
+
+        // number function 
+        const myString = "123";
+        const myNum = Number(myString);
+
+        console.log(typeof myNum);
+
+        // string function 
+        const myNum2 = 123;
+        const myString2 = String(myNum2);
+
+        console.log(typeof myString2);
+
+        // string length 
+        let text = 'Nathan Jeremy Cooper';
+        let length = text.length;
+
+        console.log(length)
+
+        // || "or" && "and" ! "not"
+        // || returns first thruthy value
+        // && returns first falsy value
+
+
+
     </script>
 </body>
 </html>
